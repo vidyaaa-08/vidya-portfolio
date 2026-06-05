@@ -26,7 +26,7 @@ export const portfolioData = {
     languages: [
       { name: "Python", level: 90 },
       { name: "JavaScript", level: 85 },
-      { name: "PHP", level: 75 }
+    
     ],
     frontend: [
       { name: "HTML5", level: 95 },
@@ -77,7 +77,7 @@ export const portfolioData = {
       category: "Frontend",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
       tags: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "Responsive Design"],
-      liveLink: "#",
+      liveLink: "https://ramdevgroupindia.com/",
       githubLink: "https://github.com"
     },
     {
