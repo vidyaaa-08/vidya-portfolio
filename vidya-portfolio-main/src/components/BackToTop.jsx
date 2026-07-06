@@ -6,21 +6,12 @@ export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      // Toggle visibility based on scrolled offset
-      setIsVisible(window.scrollY > 400);
-    };
-
+    const toggleVisibility = () => setIsVisible(window.scrollY > 400);
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <AnimatePresence>
@@ -29,11 +20,11 @@ export default function BackToTop() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
-          whileHover={{ scale: 1.1, y: -2 }}
+          whileHover={{ y: -2, scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-30 w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 text-cyan-400 flex items-center justify-center text-sm shadow-2xl hover:border-cyan-400 hover:shadow-[0_0_12px_#00f3ff] transition-colors duration-300"
-          aria-label="Scroll to Top of Page"
+          className="fixed bottom-6 right-6 z-30 inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-lg transition hover:bg-[#2563eb] hover:text-white"
+          aria-label="Scroll to top"
         >
           <FaChevronUp />
         </motion.button>
