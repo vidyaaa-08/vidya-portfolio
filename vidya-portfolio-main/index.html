@@ -14,9 +14,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
       /* Prevent cursor flash while loading custom cursor */
-      body, html {
-        cursor: none;
-      }
+   body, html {
+  cursor: auto;
+}
+
+a,
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  cursor: text;
+}
       @media (max-width: 1024px) {
         body, html {
           cursor: auto;
